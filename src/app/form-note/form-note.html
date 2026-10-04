@@ -1,0 +1,27 @@
+<form (ngSubmit)="submit()" class="border-2 shadow-[4px_4px_0px_0px_#000] flex flex-col p-5 w-80">
+  <h1 class="text-xl font-medium mx-auto mb-5">Create a note</h1>
+  <label for="title" class="text-lg font-normal">Title</label>
+  <input
+    type="text"
+    name="title"
+    id="title"
+    [(ngModel)]="titleNote"
+    class="border mb-3 focus: outline-none focus:ring-1 p-1"
+    required
+  />
+
+  <label for="text" class="text-lg font-normal">Text</label>
+  <textarea
+    name="texиt"
+    [(ngModel)]="textNote"
+    id="text"
+    class="border mb-3 focus: outline-none focus:ring-1 px-1"
+    required
+  ></textarea>
+  <button
+    type="submit"
+    class="border mt-3 p-1 cursor-pointer hover:bg-black hover:text-white transition-all active:scale-95"
+  >
+    Add List
+  </button>
+</form>
