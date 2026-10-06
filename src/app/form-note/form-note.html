@@ -6,21 +6,22 @@
     name="title"
     id="title"
     [(ngModel)]="titleNote"
-    class="border mb-3 focus: outline-none focus:ring-1 p-1"
+    class="border-2 mb-3 focus:outline-none focus:ring-1 p-1"
     required
   />
 
   <label for="text" class="text-lg font-normal">Text</label>
-  <textarea
-    name="texиt"
-    [(ngModel)]="textNote"
+  <input
+    type="text"
+    name="text"
     id="text"
-    class="border mb-3 focus: outline-none focus:ring-1 px-1"
+    [(ngModel)]="textNote"
+    class="border-2 mb-3 focus:outline-none focus:ring-1 p-1"
     required
-  ></textarea>
+  />
   <button
     type="submit"
-    class="border mt-3 p-1 cursor-pointer hover:bg-black hover:text-white transition-all active:scale-95"
+    class="border-2 mt-3 p-1 cursor-pointer hover:bg-black hover:text-white transition-all active:scale-95"
   >
     Add List
   </button>

@@ -12,11 +12,6 @@ import { FormNote } from './form-note/form-note';
 export class App {
   protected readonly notes = signal<Note[]>(JSON.parse(localStorage.getItem('notes') ?? '[]'));
 
-  protected newNote = signal<Pick<Note, 'title' | 'text'>>({
-    title: '',
-    text: '',
-  });
-
   protected addNote(noteData: Pick<Note, 'title' | 'text'>) {
     if (!noteData.title || !noteData.text) return;
 

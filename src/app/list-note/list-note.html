@@ -5,17 +5,23 @@
     <p class="animate-pulse">List is empty, add a new note!</p>
   } @else {
     <ul>
-      <li *ngFor="let note of notesList" class="flex flex-row items-center mb-3 gap-5">
-        <div
-          class="border-2 p-1 px-2 w-120 shadow-[4px_4px_0px_0px_#000] hover:scale-105 transition-all h-17"
-        >
-          <h1 class="font-medium text-lg truncate">{{ note.title }}</h1>
-          <p class="text-base truncate mb-1">{{ note.text }}</p>
+      <li
+        *ngFor="let note of notesList"
+        class="group flex flex-row items-center justify-between mb-3 min-w-120 w-120 border-2 shadow-[4px_4px_0px_0px_#000] hover:scale-105 transition-all"
+      >
+        <div class="p-1 px-2 w-120 group-hover:w-100">
+          <h1 class="font-medium text-lg truncate">
+            {{ note.title }}
+          </h1>
+
+          <p class="text-base mb-1 truncate">
+            {{ note.text }}
+          </p>
         </div>
         <button
           type="button"
           (click)="sendDelete(note.id)"
-          class="bg-red-600 text-white h-17 p-3 shadow-[4px_4px_0px_0px_#000] border-2 border-black cursor-pointer active:scale-95 hover:scale-105 transition-all"
+          class="bg-red-600 text-white h-17 w-0 shadow-[4px_4px_0px_0px_#000] border-l-2 border-black cursor-pointer hover:bg-red-800 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:w-20"
         >
           Delete
         </button>

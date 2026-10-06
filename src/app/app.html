@@ -1,8 +1,4 @@
-<main class="flex flex-row item-center justify-center mt-10 gap-20">
-  <form-app
-    [titleNote]="newNote().title"
-    [textNote]="newNote().text"
-    (save)="addNote($event)"
-  ></form-app>
+<main class="flex flex-row justify-center mt-10 gap-20">
+  <form-app (save)="addNote($event)"></form-app>
   <list-app [notesList]="notes()" (delete)="removeNote($event)"></list-app>
 </main>

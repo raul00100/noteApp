@@ -7,8 +7,8 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './form-note.html',
 })
 export class FormNote {
-  @Input() titleNote!: string;
-  @Input() textNote!: string;
+  titleNote: string = '';
+  textNote: string = '';
 
   @Output() save = new EventEmitter<{ title: string; text: string }>();
 
